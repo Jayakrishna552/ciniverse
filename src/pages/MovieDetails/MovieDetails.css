@@ -1,0 +1,174 @@
+.movie-details {
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  padding: 100px 60px;
+}
+
+.details-poster img {
+  width: 300px;
+  height: 450px;
+
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-content {
+  max-width: 600px;
+}
+
+.details-content h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.details-info {
+  display: flex;
+  gap: 20px;
+
+  color: #ccc;
+  font-size: 18px;
+
+  margin-bottom: 25px;
+}
+
+.details-content p {
+  color: #ccc;
+  font-size: 19px;
+  line-height: 1.6;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   DETAILS BUTTONS
+========================= */
+
+.details-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+/* Common button style */
+
+.details-buttons button {
+  height: 48px;
+  min-width: 120px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Play */
+
+.play-btn {
+  background: white;
+  color: #111;
+}
+
+.play-btn:hover {
+  background: #e6e6e6;
+  transform: scale(1.04);
+}
+
+/* My List */
+
+.list-btn {
+  background: #333;
+  color: white;
+  border: 1px solid #555 !important;
+}
+
+.list-btn:hover {
+  background: #444;
+  transform: scale(1.04);
+}
+
+/* Back */
+
+.back-btn {
+  background: #333;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #444;
+  transform: scale(1.04);
+}
+
+.play-btn,
+.list-btn,
+.back-btn {
+  border: none;
+
+  padding: 12px 25px;
+
+  font-size: 17px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.play-btn {
+  background-color: white;
+  color: black;
+}
+
+.list-btn {
+  background-color: #555;
+  color: white;
+}
+
+.back-btn {
+  background-color: #333;
+  color: white;
+}
+
+.play-btn:hover,
+.list-btn:hover,
+.back-btn:hover {
+  opacity: 0.8;
+}
+.video-section {
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.video-section h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.movie-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  background: black;
+}

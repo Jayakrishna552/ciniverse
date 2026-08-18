@@ -1,0 +1,584 @@
+/* =====================================================
+   CINEVERSE NAVBAR
+   BLACK + RED + WHITE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  width: 100%;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 46px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 5, 0.98),
+      rgba(10, 10, 10, 0.96)
+    );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 5px 30px rgba(0, 0, 0, 0.5);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  text-decoration: none;
+
+  font-size: 36px;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+
+  margin-right: 35px;
+
+  white-space: nowrap;
+
+  transition: 0.3s ease;
+}
+
+.navbar-logo span {
+  color: #e50914;
+}
+
+.navbar-logo b {
+  color: #ffffff;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.03);
+}
+
+
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  white-space: nowrap;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* RED UNDERLINE */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #e50914;
+
+  transition: width 0.3s ease;
+}
+
+
+.nav-links a:hover {
+  color: #e50914;
+
+  transform: translateY(-2px);
+}
+
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.navbar-right {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box {
+  width: 250px;
+
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  background: #181818;
+
+  border: 1px solid #444;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.search-box:focus-within {
+  border-color: #e50914;
+
+  box-shadow:
+    0 0 15px rgba(229, 9, 20, 0.25);
+}
+
+
+/* SEARCH INPUT */
+
+.search-box input {
+  flex: 1;
+
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  padding: 0 14px;
+
+  font-size: 16px;
+}
+
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+
+/* SEARCH BUTTON */
+
+.search-button {
+  width: 48px;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.search-button span {
+  font-size: 27px;
+
+  line-height: 1;
+
+  transform: rotate(-20deg);
+
+  display: inline-block;
+}
+
+
+.search-button:hover {
+  color: #e50914;
+}
+
+
+/* =====================================================
+   AUTH BUTTONS
+===================================================== */
+
+.auth-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SIGN IN
+===================================================== */
+
+.nav-login-btn {
+  height: 46px;
+
+  padding: 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  background: transparent;
+
+  border: 1px solid #e50914;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.nav-login-btn:hover {
+  background: #e50914;
+
+  color: white;
+
+  box-shadow:
+    0 0 22px rgba(229, 9, 20, 0.45);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SIGN UP
+===================================================== */
+
+.nav-signup-btn {
+  height: 46px;
+
+  padding: 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  background: #e50914;
+
+  border: 1px solid #e50914;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.nav-signup-btn:hover {
+  background: #ff1a25;
+
+  border-color: #ff1a25;
+
+  box-shadow:
+    0 0 25px rgba(229, 9, 20, 0.55);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CLICK EFFECT
+===================================================== */
+
+.nav-login-btn:active,
+.nav-signup-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1400px
+===================================================== */
+
+@media (max-width: 1400px) {
+
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .navbar-logo {
+    font-size: 32px;
+
+    margin-right: 25px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .search-box {
+    width: 230px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1200px
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .navbar {
+    padding: 0 22px;
+  }
+
+  .navbar-logo {
+    font-size: 29px;
+
+    margin-right: 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .search-box {
+    width: 210px;
+
+    height: 44px;
+  }
+
+  .nav-login-btn,
+  .nav-signup-btn {
+    height: 42px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1000px
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-right {
+    margin-left: 0;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 700px
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: 75px;
+
+    padding: 0 18px;
+  }
+
+  .navbar-logo {
+    font-size: 26px;
+
+    margin: 0;
+  }
+
+  .search-box {
+    width: 190px;
+
+    height: 42px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+
+    padding: 0 10px;
+  }
+
+  .search-button {
+    width: 45px;
+  }
+
+  .search-button span {
+    font-size: 25px;
+  }
+
+  .auth-buttons {
+    gap: 6px;
+  }
+
+  .nav-login-btn,
+  .nav-signup-btn {
+    height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 500px
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .navbar-logo {
+    font-size: 23px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .nav-login-btn,
+  .nav-signup-btn {
+    height: 38px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .nav-login-btn,
+  .nav-signup-btn {
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+
+}

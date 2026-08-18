@@ -1,0 +1,1402 @@
+/* =====================================================
+   CINEVERSE SIGNUP PAGE
+   BLACK + RED + WHITE
+   3D CINEMATIC DESIGN
+===================================================== */
+
+
+/* ================= GLOBAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #050505;
+}
+
+
+/* ================= MAIN PAGE ================= */
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 30% 50%,
+      rgba(229, 9, 20, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(229, 9, 20, 0.08),
+      transparent 30%
+    ),
+    #050505;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.register-header {
+  height: 78px;
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: relative;
+
+  z-index: 50;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(0, 0, 0, 0.75);
+
+  backdrop-filter: blur(15px);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+  font-size: 28px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #e50914;
+}
+
+.logo b {
+  color: white;
+}
+
+
+/* ================= HEADER LOGIN ================= */
+
+.header-login {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  font-size: 15px;
+
+  color: #aaa;
+}
+
+.header-login button {
+  background: transparent;
+
+  color: white;
+
+  border:
+    1px solid
+    #e50914;
+
+  border-radius: 25px;
+
+  padding: 9px 24px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.header-login button:hover {
+  background: #e50914;
+
+  box-shadow:
+    0 0 25px
+    rgba(229, 9, 20, 0.6);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CINEMA BACKGROUND
+===================================================== */
+
+.cinema-background {
+  position: absolute;
+
+  inset: 78px 0 0;
+
+  overflow: hidden;
+
+  perspective: 1200px;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   RED PARTICLES
+===================================================== */
+
+.particle {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #e50914;
+
+  box-shadow:
+    0 0 10px #e50914,
+    0 0 25px
+    rgba(229, 9, 20, 0.8);
+
+  animation:
+    particleFloat
+    6s
+    infinite
+    ease-in-out;
+}
+
+.p1 {
+  top: 15%;
+  left: 12%;
+}
+
+.p2 {
+  top: 30%;
+  left: 35%;
+
+  animation-delay: 1s;
+}
+
+.p3 {
+  top: 70%;
+  left: 10%;
+
+  animation-delay: 2s;
+}
+
+.p4 {
+  top: 20%;
+  left: 55%;
+
+  animation-delay: 3s;
+}
+
+.p5 {
+  top: 80%;
+  left: 50%;
+
+  animation-delay: 1.5s;
+}
+
+.p6 {
+  top: 15%;
+  right: 10%;
+
+  animation-delay: 2.5s;
+}
+
+.p7 {
+  bottom: 15%;
+  right: 20%;
+
+  animation-delay: 4s;
+}
+
+.p8 {
+  top: 50%;
+  right: 8%;
+
+  animation-delay: 1.2s;
+}
+
+
+@keyframes particleFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      scale(1);
+
+    opacity: 0.4;
+  }
+
+  50% {
+    transform:
+      translateY(-45px)
+      scale(1.5);
+
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   3D REEL AREA
+===================================================== */
+
+.reel-area {
+  position: absolute;
+
+  left: 20%;
+
+  top: 50%;
+
+  width: 420px;
+  height: 420px;
+
+  transform-style: preserve-3d;
+
+  transform:
+    translate(-50%, -50%);
+
+  animation:
+    reelFloat
+    5s
+    infinite
+    ease-in-out;
+}
+
+
+@keyframes reelFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(-50%, -50%)
+      translateY(0)
+      rotateX(4deg);
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      translateY(-20px)
+      rotateX(8deg);
+  }
+}
+
+
+/* =====================================================
+   FILM REEL
+===================================================== */
+
+.film-reel {
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotateX(15deg);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #111 0 15%,
+      #333 16% 18%,
+      #111 19% 48%,
+      #333 49% 52%,
+      #0a0a0a 53%
+    );
+
+  border:
+    8px solid
+    #222;
+
+  box-shadow:
+    inset 0 0 30px #000,
+    0 0 25px
+    rgba(229, 9, 20, 0.8),
+    0 0 70px
+    rgba(229, 9, 20, 0.3);
+
+  animation:
+    reelRotate
+    10s
+    linear
+    infinite;
+}
+
+
+@keyframes reelRotate {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotateX(15deg)
+      rotateZ(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotateX(15deg)
+      rotateZ(360deg);
+  }
+}
+
+
+/* =====================================================
+   REEL CENTER
+===================================================== */
+
+.reel-center {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #111;
+
+  border:
+    10px solid
+    #555;
+
+  box-shadow:
+    inset 0 0 15px #000,
+    0 0 10px
+    rgba(229, 9, 20, 0.8);
+}
+
+
+/* =====================================================
+   REEL HOLES
+===================================================== */
+
+.reel-hole {
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  background: #050505;
+
+  border-radius: 50%;
+
+  border:
+    5px solid
+    #444;
+
+  box-shadow:
+    inset 0 0 15px #000;
+}
+
+.hole-one {
+  top: 30px;
+  left: 135px;
+}
+
+.hole-two {
+  top: 100px;
+  right: 38px;
+}
+
+.hole-three {
+  bottom: 45px;
+  right: 85px;
+}
+
+.hole-four {
+  bottom: 45px;
+  left: 85px;
+}
+
+.hole-five {
+  top: 100px;
+  left: 38px;
+}
+
+.hole-six {
+  top: 30px;
+  right: 135px;
+}
+
+
+/* =====================================================
+   FILM STRIP
+===================================================== */
+
+.film-strip {
+  position: absolute;
+
+  width: 600px;
+  height: 85px;
+
+  left: -70px;
+  bottom: 20px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #111 0px,
+      #111 75px,
+      #e50914 76px,
+      #111 78px
+    );
+
+  border-top:
+    8px solid
+    #222;
+
+  border-bottom:
+    8px solid
+    #222;
+
+  transform:
+    rotate(-18deg)
+    translateZ(80px);
+
+  box-shadow:
+    0 0 20px
+    rgba(229, 9, 20, 0.5);
+
+  animation:
+    filmMove
+    8s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes filmMove {
+
+  0%,
+  100% {
+    transform:
+      rotate(-18deg)
+      translateZ(80px)
+      translateX(0);
+  }
+
+  50% {
+    transform:
+      rotate(-18deg)
+      translateZ(80px)
+      translateX(25px);
+  }
+}
+
+
+/* =====================================================
+   MOVIE POSTERS
+===================================================== */
+
+.movie-poster {
+  position: absolute;
+
+  width: 120px;
+  height: 175px;
+
+  padding: 7px;
+
+  background: #111;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.8),
+
+    0 0 20px
+    rgba(229, 9, 20, 0.3);
+
+  transform-style: preserve-3d;
+
+  animation:
+    posterFloat
+    5s
+    infinite
+    ease-in-out;
+}
+
+
+.movie-poster span {
+  display: block;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  margin-top: 5px;
+
+  color: #ddd;
+
+  letter-spacing: 1px;
+}
+
+
+.poster-image {
+  height: 135px;
+
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #333,
+      #111
+    );
+}
+
+
+.poster-interstellar {
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      #aaa,
+      #222 35%,
+      #050505 70%
+    );
+}
+
+
+.poster-joker {
+  background:
+    linear-gradient(
+      140deg,
+      #400,
+      #111,
+      #800
+    );
+}
+
+
+.poster-batman {
+  background:
+    radial-gradient(
+      circle,
+      #333,
+      #050505 65%
+    );
+}
+
+
+.poster-one {
+  left: 5%;
+  top: 25%;
+
+  transform:
+    rotate(-12deg);
+
+  animation-delay: 1s;
+}
+
+
+.poster-two {
+  left: 33%;
+  top: 12%;
+
+  transform:
+    rotate(12deg);
+
+  animation-delay: 2s;
+}
+
+
+.poster-three {
+  right: 5%;
+  bottom: 10%;
+
+  transform:
+    rotate(15deg);
+
+  animation-delay: 3s;
+}
+
+
+@keyframes posterFloat {
+
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -20px;
+  }
+}
+
+
+/* =====================================================
+   LEFT INTRO
+===================================================== */
+
+.register-intro {
+  position: absolute;
+
+  left: 6%;
+
+  top: 27%;
+
+  width: 410px;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+.small-title {
+  color: #aaa;
+
+  font-size: 18px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 5px;
+}
+
+
+.register-intro h1 {
+  font-size: 60px;
+
+  line-height: 0.95;
+
+  margin: 0;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 4px 20px
+    rgba(0, 0, 0, 0.8);
+}
+
+
+.register-intro h1 span {
+  color: #e50914;
+
+  text-shadow:
+    0 0 25px
+    rgba(229, 9, 20, 0.5);
+}
+
+
+.intro-text {
+  margin-top: 25px;
+
+  color: #aaa;
+
+  font-size: 17px;
+
+  letter-spacing: 2px;
+}
+
+
+.intro-text span {
+  color: #e50914;
+
+  padding: 0 10px;
+}
+
+
+.intro-description {
+  color: #888;
+
+  line-height: 1.7;
+
+  max-width: 330px;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   REGISTER CARD
+===================================================== */
+
+.register-card {
+  position: absolute;
+
+  right: 8%;
+
+  top: 95px;
+
+  bottom: 30px;
+
+  width: 490px;
+
+  padding: 30px 42px;
+
+  z-index: 20;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 28, 28, 0.96),
+      rgba(5, 5, 5, 0.98)
+    );
+
+  border:
+    1px solid
+    rgba(229, 9, 20, 0.7);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.8),
+
+    0 0 35px
+    rgba(229, 9, 20, 0.18);
+
+  backdrop-filter: blur(20px);
+
+  animation:
+    cardAppear
+    0.8s
+    ease;
+
+  overflow-y: auto;
+}
+
+
+.register-card::-webkit-scrollbar {
+  width: 4px;
+}
+
+.register-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.register-card::-webkit-scrollbar-thumb {
+  background: #e50914;
+
+  border-radius: 10px;
+}
+
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(60px)
+      rotateY(-8deg);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      rotateY(0);
+  }
+}
+
+
+/* =====================================================
+   CARD LOGO
+===================================================== */
+
+.card-logo {
+  text-align: center;
+
+  font-size: 25px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 12px;
+}
+
+
+.card-logo span {
+  color: #e50914;
+}
+
+
+.card-logo b {
+  color: white;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.register-card h2 {
+  text-align: center;
+
+  font-size: 28px;
+
+  margin:
+    0 0 6px;
+}
+
+
+.card-subtitle {
+  text-align: center;
+
+  color: #888;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.input-box {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+
+.input-box:focus-within {
+  border-color: #e50914;
+
+  box-shadow:
+    0 0 18px
+    rgba(229, 9, 20, 0.2);
+
+  transform:
+    translateY(-2px);
+}
+
+
+.input-icon {
+  margin-left: 15px;
+
+  font-size: 15px;
+
+  opacity: 0.7;
+}
+
+
+.input-box input {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 14px 15px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+
+.input-box input::placeholder {
+  color: #777;
+}
+
+
+/* =====================================================
+   EYE BUTTON
+===================================================== */
+
+.eye-btn {
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  margin-right: 12px;
+
+  font-size: 15px;
+
+  padding: 5px;
+}
+
+
+/* =====================================================
+   CREATE ACCOUNT
+===================================================== */
+
+.create-account {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b20710,
+      #e50914,
+      #ff202b
+    );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  transition:
+    all 0.3s ease;
+
+  box-shadow:
+    0 10px 25px
+    rgba(229, 9, 20, 0.25);
+}
+
+
+.create-account:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(229, 9, 20, 0.45);
+}
+
+
+.arrow {
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+
+.create-account:hover .arrow {
+  transform:
+    translateX(6px);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 20px 0;
+}
+
+
+.divider span {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.divider p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   SOCIAL LOGIN
+===================================================== */
+
+.social-login {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+.social-login button {
+  width: 75px;
+
+  height: 45px;
+
+  border-radius: 8px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.social-login button:hover {
+  border-color: #e50914;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 5px 20px
+    rgba(229, 9, 20, 0.2);
+}
+
+
+.google {
+  color: #4285f4;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+.github {
+  color: white;
+
+  font-size: 20px;
+}
+
+
+.facebook {
+  color: #1877f2;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   SIGN IN
+===================================================== */
+
+.signin-text {
+  text-align: center;
+
+  color: #777;
+
+  font-size: 13px;
+
+  margin-top: 18px;
+
+  margin-bottom: 0;
+}
+
+
+.signin-text span {
+  color: #e50914;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.signin-text span:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.security-text {
+  position: fixed;
+
+  bottom: 15px;
+
+  right: 3%;
+
+  color: #666;
+
+  font-size: 11px;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .register-intro {
+    left: 4%;
+  }
+
+  .register-card {
+    right: 3%;
+
+    width: 440px;
+  }
+
+  .reel-area {
+    left: 24%;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 850px
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .register-page {
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+  }
+
+
+  .cinema-background {
+    opacity: 0.3;
+  }
+
+
+  .register-intro {
+    position: relative;
+
+    left: auto;
+
+    top: auto;
+
+    width: 100%;
+
+    padding:
+      45px
+      25px
+      10px;
+
+    text-align: center;
+  }
+
+
+  .register-intro h1 {
+    font-size: 48px;
+  }
+
+
+  .intro-description {
+    margin: auto;
+  }
+
+
+  .register-card {
+    position: relative;
+
+    top: auto;
+
+    right: auto;
+
+    bottom: auto;
+
+    transform: none;
+
+    width:
+      calc(100% - 40px);
+
+    max-height: none;
+
+    margin:
+      30px auto
+      80px;
+
+    overflow: visible;
+  }
+
+
+  .security-text {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE - 550px
+===================================================== */
+
+@media (max-width: 550px) {
+
+  .register-header {
+    padding:
+      0 20px;
+  }
+
+
+  .logo {
+    font-size: 22px;
+  }
+
+
+  .header-login span {
+    display: none;
+  }
+
+
+  .header-login button {
+    padding:
+      8px 18px;
+
+    font-size: 13px;
+  }
+
+
+  .register-card {
+    width:
+      calc(100% - 24px);
+
+    padding:
+      25px 18px;
+
+    border-radius: 16px;
+  }
+
+
+  .register-card h2 {
+    font-size: 25px;
+  }
+
+
+  .register-intro h1 {
+    font-size: 40px;
+  }
+
+
+  .small-title {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .reel-area {
+    left: 50%;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.7);
+  }
+
+
+  .movie-poster {
+    display: none;
+  }
+
+
+  .social-login button {
+    width: 65px;
+  }
+}

@@ -1,0 +1,63 @@
+.search-page {
+  min-height: 100vh;
+
+  background-color: #111;
+
+  color: white;
+
+  padding: 100px 50px;
+}
+
+.search-page h1 {
+  margin-bottom: 30px;
+
+  font-size: 30px;
+}
+
+.search-results {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+.search-card {
+  width: 200px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.search-card img {
+  width: 200px;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.search-card h3 {
+  margin: 8px 0;
+
+  font-size: 18px;
+}
+
+.search-card p {
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+.search-card:hover {
+  transform: scale(1.05);
+}
+
+.no-results {
+  color: #aaa;
+
+  font-size: 20px;
+}

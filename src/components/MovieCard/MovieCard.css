@@ -1,0 +1,31 @@
+.movie-card {
+  flex: 0 0 auto;
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 220px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.movie-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.movie-card p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 0;
+}

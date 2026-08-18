@@ -1,0 +1,58 @@
+.movie-row {
+  padding: 30px 50px;
+  background-color: #111;
+  position: relative;
+}
+
+.movie-row h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.movie-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.movie-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 5px 20px;
+  scrollbar-width: none;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  position: absolute;
+  z-index: 10;
+  width: 45px;
+  height: 80px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.left-btn {
+  left: 0;
+}
+
+.right-btn {
+  right: 0;
+}

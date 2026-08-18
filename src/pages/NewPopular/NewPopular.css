@@ -1,0 +1,14 @@
+.category-page {
+  min-height: 100vh;
+  background: #111;
+  color: white;
+}
+
+.category-content {
+  padding: 30px 40px 50px;
+}
+
+.category-content h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
