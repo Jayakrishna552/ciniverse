@@ -19,72 +19,59 @@ import NewPopular from "../pages/NewPopular/NewPopular";
 
 import ProtectedRoute from "./ProtectedRoute";
 
-
 function AppRoutes() {
-
   return (
-    <BrowserRouter>
-
+    <BrowserRouter basename="/ciniverse">
       <Routes>
 
         {/* =========================
             PUBLIC ROUTES
         ========================= */}
 
-        {/* Home */}
         <Route
           path="/"
           element={<Home />}
         />
 
-        {/* Login */}
         <Route
           path="/login"
           element={<Login />}
         />
 
-        {/* Signup */}
         <Route
           path="/signup"
           element={<Signup />}
         />
 
-        {/* Search */}
         <Route
           path="/search"
           element={<Search />}
         />
 
-        {/* Movie Details */}
         <Route
           path="/movie/:id"
           element={<MovieDetails />}
         />
 
-        {/* TV Shows */}
         <Route
           path="/tv-shows"
           element={<TVShows />}
         />
 
-        {/* Movies */}
         <Route
           path="/movies"
           element={<Movies />}
         />
 
-        {/* New & Popular */}
         <Route
           path="/new-popular"
           element={<NewPopular />}
         />
 
-
         {/* =========================
             PROTECTED ROUTES
         ========================= */}
 
-        {/* Profile */}
         <Route
           path="/profile"
           element={
@@ -94,7 +81,6 @@ function AppRoutes() {
           }
         />
 
-        {/* My List */}
         <Route
           path="/my-list"
           element={
@@ -103,7 +89,6 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
-
 
         {/* =========================
             NOT FOUND
@@ -115,7 +100,6 @@ function AppRoutes() {
         />
 
       </Routes>
-
     </BrowserRouter>
   );
 }
